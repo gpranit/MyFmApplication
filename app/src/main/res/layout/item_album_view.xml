@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="AlbumItemDataBinding">
+
+        <variable
+            name="album"
+            type="com.kotlin.myfmapplication.dataaccesslayer.datacontract.searchalbum.Album" />
+
+
+    </data>
+
+    <ImageView
+        android:id="@+id/albumImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:padding="2dp"
+        app:imageUrl="@{album.image.get(2).text}"
+        tools:src="@tools:sample/backgrounds/scenic" />
+</layout>

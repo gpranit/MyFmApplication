@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyFm</string>
+    <string name="search">Search</string>
+    <string name="enter_album_name_to_search">Enter album name to search</string>
+    <string name="album_extra">ALBUM_EXTRA</string>
+    <string name="api_key">2321a86934949290dd0f69ffa727a81a</string>
+    <string name="format_json">json</string>
+    <string name="method_album_search">album.search</string>
+    <string name="method_album_getinfo">album.getInfo</string>
+</resources>

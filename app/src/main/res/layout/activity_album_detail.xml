@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="AlbumDetailDataBinding">
+        <variable
+            name="viewModel"
+            type="com.kotlin.myfmapplication.viewmodel.albumdetail.AlbumDetailViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <com.google.android.material.internal.BaselineLayout
+            android:id="@+id/verticalBaseLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:imageUrl="@{viewModel.imageUrl}"
+            app:layout_constraintEnd_toStartOf="@id/verticalBaseLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:text="@{viewModel.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/verticalBaseLine"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Artist" />
+
+        <TextView
+            android:id="@+id/textArtistName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:text="@{viewModel.artist}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/verticalBaseLine"
+            app:layout_constraintTop_toBottomOf="@id/textViewName"
+            tools:text="Artist" />
+
+        <TextView
+            android:id="@+id/textViewListeners"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:text="@{viewModel.listeners}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/verticalBaseLine"
+            app:layout_constraintTop_toBottomOf="@id/textArtistName"
+            tools:text="40000" />
+
+        <TextView
+            android:id="@+id/textViewPlayCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:text="@{viewModel.playCount}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/verticalBaseLine"
+            app:layout_constraintTop_toBottomOf="@id/textViewListeners"
+            tools:text="5000" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
